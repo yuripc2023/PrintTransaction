@@ -1,0 +1,7 @@
+/build
+/dist
+.env
+send_xml.spec
+/__pycache__
+last_log_cleanup.txt
+print_server.log.*

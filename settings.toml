@@ -1,0 +1,54 @@
+[api]
+token_header = "Authorization"
+token_prefix = "Bearer"
+timeout_seconds = 30
+verify_tls = true
+headers = {}
+
+[websocket]
+url = ""
+company_id = ""
+verify_tls = true
+connect_timeout_seconds = 30
+ping_interval_seconds = 20
+ping_timeout_seconds = 20
+reconnect_delay_seconds = 5
+log_payloads = false
+payload_log_max_chars = 2000
+event_types = ["transaction.created", "transaction.updated"]
+
+[service]
+error_sleep_seconds = 30
+log_backup_count = 7
+poll_seconds = 10
+idle_sleep_seconds = 10
+
+[printers]
+map = {}
+
+[print]
+precuenta_printer_name = "CBX-POS808"
+precuenta_copies = 1
+encoding = "cp850"
+codepage_command_hex = "1B7402"
+document_title = "TicketProduccion"
+feed_lines = 4
+highlight_command_hex = "1D2111"
+highlight_reset_command_hex = "1D2100"
+detail_size_command_hex = "1D2101"
+detail_size_reset_command_hex = "1D2100"
+detail_font_command_hex = ""
+detail_font_reset_command_hex = ""
+detail_use_highlight_style = true
+detail_ticket_width = 20
+detail_quantity_width = 4
+detail_description_indent = 4
+cut_enabled = true
+cut_command_hex = "1D5600"
+pre_cut_feed_lines = 3
+after_job_sleep_ms = 300
+combine_ticket_and_cut = true
+beep_enabled = true
+beep_command_hex = "1B420203,07"
+beep_position = "before_cut"
+reprint_when_not_confirmed = false
