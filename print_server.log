@@ -1,6 +1,0 @@
-2026-09-21 20:12:41,125 - INFO - ATIC Peru
-2026-09-21 20:12:41,125 - INFO - Iniciando print_server.py version 1.0.3
-2026-09-21 20:12:41,125 - INFO - Modo de escucha configurado por WebSocket.
-2026-09-21 20:12:41,125 - INFO - Escuchando eventos en wss://api.grupobasaly.pe/ws/companies/1/transactions/
-2026-09-21 20:12:41,753 - INFO - Conexion WebSocket establecida correctamente.
-2026-09-21 20:12:41,753 - INFO - Canal suscrito: company_1_transactions

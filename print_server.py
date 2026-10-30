@@ -29,7 +29,7 @@ from websocket import (
 )
 
 
-SCRIPT_VERSION = "1.0.3"
+SCRIPT_VERSION = "1.0.4"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(BASE_DIR, ".env")
 SETTINGS_PATH = os.path.join(BASE_DIR, "settings.toml")
@@ -737,7 +737,8 @@ class TicketPrinter:
                 or detail.get("Item")
                 or ""
             )
-            lines.extend(self._format_transaction_rows(quantity, str(product).strip(), "XX"))
+            location = str(detail.get("Location") or "").strip() or "-"
+            lines.extend(self._format_transaction_rows(quantity, str(product).strip(), location))
             detail_obs = (detail.get("Observations") or detail.get("Observation") or "").strip()
             if detail_obs:
                 for chunk in textwrap.wrap(f"Obs: {detail_obs}", width=TICKET_WIDTH):
